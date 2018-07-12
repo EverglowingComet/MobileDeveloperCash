@@ -46,7 +46,7 @@ class AnimateLaunchView: UIView {
 		let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
 		rotationAnimation.fromValue = 0.0
 		rotationAnimation.toValue = Float(Double.pi * 1.5)
-		rotationAnimation.duration = 2.0
+		rotationAnimation.duration = 1.0
 		rotationAnimation.repeatCount = 0
 		rotationAnimation.delegate = self
 		_imgView.layer.add(rotationAnimation, forKey: kRotationAnimationKey)
