@@ -6,5 +6,6 @@ target 'MyStride' do
   use_frameworks!
 
   # Pods for MyStride
+  pod 'Alamofire'
 
 end
