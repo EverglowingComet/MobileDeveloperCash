@@ -1,0 +1,29 @@
+/* 
+  Localized.strings
+  MyStride
+
+  Created by KMHK on 7/10/18.
+  Copyright © 2018 KmHk.Lu. All rights reserved.
+*/
+
+"SIGN UP" = "SIGN UP";
+"LOG IN" = "LOG IN";
+"Sign Up" = "Sign Up";
+"Log In" = "Log In";
+"Cancel" = "Cancel";
+"First Name" = "First Name";
+"Last Name" = "Last Name";
+"CONTINUE" = "CONTINUE";
+"Please enter your first and last name" = "Please enter your first and last name";
+"Please enter your mobile number" = "Please enter your mobile number";
+"SEND CODE" = "SEND CODE";
+"Please check that your number is 10 digits" = "Please check that your number is 10 digits";
+"No Internet Connection" = "No Internet Connection";
+"Edit Number" = "Edit Number";
+"Please enter your SMS Code" = "Please enter your SMS Code";
+"RESEND CODE" = "RESEND CODE";
+"Invalid Code" = "Invalid Code";
+"Please double-check the code and enter it again." = "Please double-check the code and enter it again.";
+"OK" = "OK";
+"Handle" = "Handle";
+"Handle is your unique 5 to 20 chracter identity";

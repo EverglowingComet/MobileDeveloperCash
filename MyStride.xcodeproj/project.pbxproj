@@ -8,22 +8,123 @@
 
 /* Begin PBXBuildFile section */
 		8D943432C05E8DAFD053A4FC /* Pods_MyStride.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552428D55AA379F1288F8AAF /* Pods_MyStride.framework */; };
+		9239EB4420F59B7A00096ACF /* CountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB4320F59B7A00096ACF /* CountryPicker.bundle */; };
+		9239EB4820F618B200096ACF /* CountryCodePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB4720F618B200096ACF /* CountryCodePicker.swift */; };
+		9239EB4A20F62A6100096ACF /* NonCursorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB4920F62A6100096ACF /* NonCursorTextField.swift */; };
+		9239EB4C20F637EF00096ACF /* waitingIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB4B20F637EF00096ACF /* waitingIco.png */; };
+		9239EB4E20F6396B00096ACF /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB4D20F6396B00096ACF /* WaitingView.swift */; };
+		9239EB5120F64BF100096ACF /* xIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB4F20F64BF100096ACF /* xIco.png */; };
+		9239EB5220F64BF100096ACF /* warningIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB5020F64BF100096ACF /* warningIco.png */; };
+		9239EB5420F64C5800096ACF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB5320F64C5800096ACF /* AlertView.swift */; };
+		9239EB5620F6667100096ACF /* waitingIco_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB5520F6667100096ACF /* waitingIco_white.png */; };
+		9239EB5920F66C1200096ACF /* PhoneVerify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB5720F66C1200096ACF /* PhoneVerify.storyboard */; };
+		9239EB5C20F6702F00096ACF /* SignInUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB5B20F6702F00096ACF /* SignInUpModel.swift */; };
+		9239EB5E20F6724A00096ACF /* InputSMSCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB5D20F6724A00096ACF /* InputSMSCodeVC.swift */; };
+		9239EB6020F6B65600096ACF /* HandlingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9239EB5F20F6B65600096ACF /* HandlingVC.swift */; };
+		9239EB6320F6C75D00096ACF /* xIco_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB6120F6C75D00096ACF /* xIco_red.png */; };
+		9239EB6420F6C75D00096ACF /* checkIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 9239EB6220F6C75D00096ACF /* checkIco.png */; };
 		92BE2D1920F4C815004B3D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D1820F4C815004B3D20 /* AppDelegate.swift */; };
 		92BE2D1E20F4C815004B3D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D1C20F4C815004B3D20 /* Main.storyboard */; };
 		92BE2D2020F4C817004B3D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D1F20F4C817004B3D20 /* Assets.xcassets */; };
 		92BE2D2320F4C817004B3D20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D2120F4C817004B3D20 /* LaunchScreen.storyboard */; };
+		92BE2D3220F4CBCC004B3D20 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D3120F4CBCC004B3D20 /* LaunchScreenVC.swift */; };
+		92BE2D3C20F4CCBC004B3D20 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D3B20F4CCBC004B3D20 /* README.md */; };
+		92BE2D4020F4D007004B3D20 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D3F20F4D007004B3D20 /* Utils.swift */; };
+		92BE2D4220F4D25E004B3D20 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4120F4D25E004B3D20 /* logo.png */; };
+		92BE2D4520F4D3FA004B3D20 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4320F4D3FA004B3D20 /* SignUp.storyboard */; };
+		92BE2D4720F4D85D004B3D20 /* WelcomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D4620F4D85D004B3D20 /* WelcomeScreenVC.swift */; };
+		92BE2D4E20F4D9F8004B3D20 /* riderImageOval267@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4820F4D9F8004B3D20 /* riderImageOval267@2x.png */; };
+		92BE2D4F20F4D9F8004B3D20 /* mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4920F4D9F8004B3D20 /* mockup.png */; };
+		92BE2D5020F4D9F8004B3D20 /* riderImageOval267.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4A20F4D9F8004B3D20 /* riderImageOval267.png */; };
+		92BE2D5120F4D9F8004B3D20 /* mockup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4B20F4D9F8004B3D20 /* mockup@3x.png */; };
+		92BE2D5220F4D9F8004B3D20 /* riderImageOval267@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4C20F4D9F8004B3D20 /* riderImageOval267@3x.png */; };
+		92BE2D5320F4D9F8004B3D20 /* mockup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D4D20F4D9F8004B3D20 /* mockup@2x.png */; };
+		92BE2D5520F4E562004B3D20 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5420F4E562004B3D20 /* welcome.png */; };
+		92BE2D6920F4EC6E004B3D20 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5720F4EC6D004B3D20 /* Montserrat-BoldItalic.ttf */; };
+		92BE2D6A20F4EC6E004B3D20 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5820F4EC6D004B3D20 /* Montserrat-ExtraBoldItalic.ttf */; };
+		92BE2D6B20F4EC6E004B3D20 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5920F4EC6D004B3D20 /* Montserrat-Medium.ttf */; };
+		92BE2D6C20F4EC6E004B3D20 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5A20F4EC6D004B3D20 /* Montserrat-Thin.ttf */; };
+		92BE2D6D20F4EC6E004B3D20 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5B20F4EC6E004B3D20 /* Montserrat-LightItalic.ttf */; };
+		92BE2D6E20F4EC6E004B3D20 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5C20F4EC6E004B3D20 /* Montserrat-BlackItalic.ttf */; };
+		92BE2D6F20F4EC6E004B3D20 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5D20F4EC6E004B3D20 /* Montserrat-ExtraLightItalic.ttf */; };
+		92BE2D7020F4EC6E004B3D20 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5E20F4EC6E004B3D20 /* Montserrat-MediumItalic.ttf */; };
+		92BE2D7120F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D5F20F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf */; };
+		92BE2D7220F4EC6E004B3D20 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6020F4EC6E004B3D20 /* Montserrat-SemiBold.ttf */; };
+		92BE2D7320F4EC6E004B3D20 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6120F4EC6E004B3D20 /* Montserrat-ExtraLight.ttf */; };
+		92BE2D7420F4EC6E004B3D20 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6220F4EC6E004B3D20 /* Montserrat-Italic.ttf */; };
+		92BE2D7520F4EC6E004B3D20 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6320F4EC6E004B3D20 /* Montserrat-ExtraBold.ttf */; };
+		92BE2D7620F4EC6E004B3D20 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6420F4EC6E004B3D20 /* Montserrat-Bold.ttf */; };
+		92BE2D7720F4EC6E004B3D20 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6520F4EC6E004B3D20 /* Montserrat-Light.ttf */; };
+		92BE2D7820F4EC6E004B3D20 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6620F4EC6E004B3D20 /* Montserrat-Regular.ttf */; };
+		92BE2D7920F4EC6E004B3D20 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6720F4EC6E004B3D20 /* Montserrat-SemiBoldItalic.ttf */; };
+		92BE2D7A20F4EC6E004B3D20 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D6820F4EC6E004B3D20 /* Montserrat-Black.ttf */; };
+		92BE2D7C20F4EF2F004B3D20 /* SignupNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7B20F4EF2F004B3D20 /* SignupNavVC.swift */; };
+		92BE2D7E20F4F1A2004B3D20 /* SignupInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */; };
+		92BE2D8020F4FA58004B3D20 /* SignupPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */; };
+		92BE2D8920F5027F004B3D20 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D8720F5027F004B3D20 /* Localized.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04943F9A6F80F9DB87432437 /* Pods-MyStride.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyStride.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyStride/Pods-MyStride.debug.xcconfig"; sourceTree = "<group>"; };
 		552428D55AA379F1288F8AAF /* Pods_MyStride.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyStride.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ED8D983385779311A07707 /* Pods-MyStride.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyStride.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyStride/Pods-MyStride.release.xcconfig"; sourceTree = "<group>"; };
+		9239EB3A20F5584C00096ACF /* MyStride-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyStride-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		9239EB4320F59B7A00096ACF /* CountryPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CountryPicker.bundle; sourceTree = "<group>"; };
+		9239EB4720F618B200096ACF /* CountryCodePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodePicker.swift; sourceTree = "<group>"; };
+		9239EB4920F62A6100096ACF /* NonCursorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonCursorTextField.swift; sourceTree = "<group>"; };
+		9239EB4B20F637EF00096ACF /* waitingIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waitingIco.png; sourceTree = "<group>"; };
+		9239EB4D20F6396B00096ACF /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
+		9239EB4F20F64BF100096ACF /* xIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xIco.png; sourceTree = "<group>"; };
+		9239EB5020F64BF100096ACF /* warningIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warningIco.png; sourceTree = "<group>"; };
+		9239EB5320F64C5800096ACF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		9239EB5520F6667100096ACF /* waitingIco_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waitingIco_white.png; sourceTree = "<group>"; };
+		9239EB5820F66C1200096ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PhoneVerify.storyboard; sourceTree = "<group>"; };
+		9239EB5B20F6702F00096ACF /* SignInUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpModel.swift; sourceTree = "<group>"; };
+		9239EB5D20F6724A00096ACF /* InputSMSCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSMSCodeVC.swift; sourceTree = "<group>"; };
+		9239EB5F20F6B65600096ACF /* HandlingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlingVC.swift; sourceTree = "<group>"; };
+		9239EB6120F6C75D00096ACF /* xIco_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xIco_red.png; sourceTree = "<group>"; };
+		9239EB6220F6C75D00096ACF /* checkIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkIco.png; sourceTree = "<group>"; };
 		92BE2D1520F4C815004B3D20 /* MyStride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStride.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BE2D1820F4C815004B3D20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BE2D1D20F4C815004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92BE2D1F20F4C817004B3D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92BE2D2220F4C817004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92BE2D2420F4C817004B3D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BE2D3120F4CBCC004B3D20 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		92BE2D3B20F4CCBC004B3D20 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		92BE2D3F20F4D007004B3D20 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		92BE2D4120F4D25E004B3D20 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		92BE2D4420F4D3FA004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
+		92BE2D4620F4D85D004B3D20 /* WelcomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenVC.swift; sourceTree = "<group>"; };
+		92BE2D4820F4D9F8004B3D20 /* riderImageOval267@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "riderImageOval267@2x.png"; sourceTree = "<group>"; };
+		92BE2D4920F4D9F8004B3D20 /* mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mockup.png; sourceTree = "<group>"; };
+		92BE2D4A20F4D9F8004B3D20 /* riderImageOval267.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = riderImageOval267.png; sourceTree = "<group>"; };
+		92BE2D4B20F4D9F8004B3D20 /* mockup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mockup@3x.png"; sourceTree = "<group>"; };
+		92BE2D4C20F4D9F8004B3D20 /* riderImageOval267@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "riderImageOval267@3x.png"; sourceTree = "<group>"; };
+		92BE2D4D20F4D9F8004B3D20 /* mockup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mockup@2x.png"; sourceTree = "<group>"; };
+		92BE2D5420F4E562004B3D20 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
+		92BE2D5720F4EC6D004B3D20 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5820F4EC6D004B3D20 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5920F4EC6D004B3D20 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		92BE2D5A20F4EC6D004B3D20 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		92BE2D5B20F4EC6E004B3D20 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5C20F4EC6E004B3D20 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5D20F4EC6E004B3D20 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5E20F4EC6E004B3D20 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D5F20F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D6020F4EC6E004B3D20 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		92BE2D6120F4EC6E004B3D20 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		92BE2D6220F4EC6E004B3D20 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		92BE2D6320F4EC6E004B3D20 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		92BE2D6420F4EC6E004B3D20 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		92BE2D6520F4EC6E004B3D20 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		92BE2D6620F4EC6E004B3D20 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		92BE2D6720F4EC6E004B3D20 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		92BE2D6820F4EC6E004B3D20 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		92BE2D7B20F4EF2F004B3D20 /* SignupNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupNavVC.swift; path = MyStride/ViewControllers/SignupNavVC.swift; sourceTree = SOURCE_ROOT; };
+		92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupInputVC.swift; path = MyStride/ViewControllers/SignupInputVC.swift; sourceTree = SOURCE_ROOT; };
+		92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupPhoneVC.swift; path = MyStride/ViewControllers/SignupPhoneVC.swift; sourceTree = SOURCE_ROOT; };
+		92BE2D8820F5027F004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +139,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9239EB3520F52EDF00096ACF /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				92BE2D7B20F4EF2F004B3D20 /* SignupNavVC.swift */,
+				92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */,
+			);
+			name = SignUpVC;
+			sourceTree = "<group>";
+		};
+		9239EB3620F53F4600096ACF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9239EB4720F618B200096ACF /* CountryCodePicker.swift */,
+				9239EB4320F59B7A00096ACF /* CountryPicker.bundle */,
+				9239EB4920F62A6100096ACF /* NonCursorTextField.swift */,
+				9239EB4D20F6396B00096ACF /* WaitingView.swift */,
+				9239EB5320F64C5800096ACF /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9239EB5A20F66DC700096ACF /* PhoneVerifyVC */ = {
+			isa = PBXGroup;
+			children = (
+				92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */,
+				9239EB5D20F6724A00096ACF /* InputSMSCodeVC.swift */,
+				9239EB5F20F6B65600096ACF /* HandlingVC.swift */,
+			);
+			name = PhoneVerifyVC;
+			sourceTree = "<group>";
+		};
 		92BE2D0C20F4C815004B3D20 = {
 			isa = PBXGroup;
 			children = (
@@ -59,11 +191,16 @@
 		92BE2D1720F4C815004B3D20 /* MyStride */ = {
 			isa = PBXGroup;
 			children = (
+				92BE2D3D20F4CE00004B3D20 /* Utils */,
+				9239EB3620F53F4600096ACF /* Views */,
 				92BE2D2C20F4C915004B3D20 /* ViewModels */,
 				92BE2D2B20F4C90D004B3D20 /* ViewControllers */,
 				92BE2D2A20F4C904004B3D20 /* Storyboards */,
+				92BE2D3E20F4CEF2004B3D20 /* Resources */,
 				92BE2D1820F4C815004B3D20 /* AppDelegate.swift */,
 				92BE2D1F20F4C817004B3D20 /* Assets.xcassets */,
+				9239EB3A20F5584C00096ACF /* MyStride-Bridging-Header.h */,
+				92BE2D3B20F4CCBC004B3D20 /* README.md */,
 				92BE2D2420F4C817004B3D20 /* Info.plist */,
 			);
 			path = MyStride;
@@ -73,7 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				92BE2D2120F4C817004B3D20 /* LaunchScreen.storyboard */,
+				92BE2D4320F4D3FA004B3D20 /* SignUp.storyboard */,
+				9239EB5720F66C1200096ACF /* PhoneVerify.storyboard */,
 				92BE2D1C20F4C815004B3D20 /* Main.storyboard */,
+				92BE2D8720F5027F004B3D20 /* Localized.strings */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -81,6 +221,10 @@
 		92BE2D2B20F4C90D004B3D20 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9239EB5A20F66DC700096ACF /* PhoneVerifyVC */,
+				9239EB3520F52EDF00096ACF /* SignUpVC */,
+				92BE2D3020F4CBB7004B3D20 /* LaunchScreenVC */,
+				92BE2D4620F4D85D004B3D20 /* WelcomeScreenVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,8 +232,72 @@
 		92BE2D2C20F4C915004B3D20 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9239EB5B20F6702F00096ACF /* SignInUpModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		92BE2D3020F4CBB7004B3D20 /* LaunchScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				92BE2D3120F4CBCC004B3D20 /* LaunchScreenVC.swift */,
+			);
+			name = LaunchScreenVC;
+			sourceTree = "<group>";
+		};
+		92BE2D3D20F4CE00004B3D20 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92BE2D3F20F4D007004B3D20 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		92BE2D3E20F4CEF2004B3D20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9239EB6220F6C75D00096ACF /* checkIco.png */,
+				9239EB6120F6C75D00096ACF /* xIco_red.png */,
+				9239EB5520F6667100096ACF /* waitingIco_white.png */,
+				9239EB5020F64BF100096ACF /* warningIco.png */,
+				9239EB4F20F64BF100096ACF /* xIco.png */,
+				9239EB4B20F637EF00096ACF /* waitingIco.png */,
+				92BE2D5620F4EC1D004B3D20 /* Fonts */,
+				92BE2D5420F4E562004B3D20 /* welcome.png */,
+				92BE2D4920F4D9F8004B3D20 /* mockup.png */,
+				92BE2D4D20F4D9F8004B3D20 /* mockup@2x.png */,
+				92BE2D4B20F4D9F8004B3D20 /* mockup@3x.png */,
+				92BE2D4A20F4D9F8004B3D20 /* riderImageOval267.png */,
+				92BE2D4820F4D9F8004B3D20 /* riderImageOval267@2x.png */,
+				92BE2D4C20F4D9F8004B3D20 /* riderImageOval267@3x.png */,
+				92BE2D4120F4D25E004B3D20 /* logo.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92BE2D5620F4EC1D004B3D20 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92BE2D6820F4EC6E004B3D20 /* Montserrat-Black.ttf */,
+				92BE2D5C20F4EC6E004B3D20 /* Montserrat-BlackItalic.ttf */,
+				92BE2D6420F4EC6E004B3D20 /* Montserrat-Bold.ttf */,
+				92BE2D5720F4EC6D004B3D20 /* Montserrat-BoldItalic.ttf */,
+				92BE2D6320F4EC6E004B3D20 /* Montserrat-ExtraBold.ttf */,
+				92BE2D5820F4EC6D004B3D20 /* Montserrat-ExtraBoldItalic.ttf */,
+				92BE2D6120F4EC6E004B3D20 /* Montserrat-ExtraLight.ttf */,
+				92BE2D5D20F4EC6E004B3D20 /* Montserrat-ExtraLightItalic.ttf */,
+				92BE2D6220F4EC6E004B3D20 /* Montserrat-Italic.ttf */,
+				92BE2D6520F4EC6E004B3D20 /* Montserrat-Light.ttf */,
+				92BE2D5B20F4EC6E004B3D20 /* Montserrat-LightItalic.ttf */,
+				92BE2D5920F4EC6D004B3D20 /* Montserrat-Medium.ttf */,
+				92BE2D5E20F4EC6E004B3D20 /* Montserrat-MediumItalic.ttf */,
+				92BE2D6620F4EC6E004B3D20 /* Montserrat-Regular.ttf */,
+				92BE2D6020F4EC6E004B3D20 /* Montserrat-SemiBold.ttf */,
+				92BE2D6720F4EC6E004B3D20 /* Montserrat-SemiBoldItalic.ttf */,
+				92BE2D5A20F4EC6D004B3D20 /* Montserrat-Thin.ttf */,
+				92BE2D5F20F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C5414C395484EFE15BC4288D /* Pods */ = {
@@ -120,6 +328,7 @@
 				92BE2D1120F4C815004B3D20 /* Sources */,
 				92BE2D1220F4C815004B3D20 /* Frameworks */,
 				92BE2D1320F4C815004B3D20 /* Resources */,
+				6C84E87AA0F754469291EFA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,9 +377,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9239EB6420F6C75D00096ACF /* checkIco.png in Resources */,
+				92BE2D8920F5027F004B3D20 /* Localized.strings in Resources */,
+				92BE2D7720F4EC6E004B3D20 /* Montserrat-Light.ttf in Resources */,
 				92BE2D2320F4C817004B3D20 /* LaunchScreen.storyboard in Resources */,
+				92BE2D5320F4D9F8004B3D20 /* mockup@2x.png in Resources */,
+				92BE2D4E20F4D9F8004B3D20 /* riderImageOval267@2x.png in Resources */,
+				92BE2D5020F4D9F8004B3D20 /* riderImageOval267.png in Resources */,
+				92BE2D4220F4D25E004B3D20 /* logo.png in Resources */,
+				92BE2D5220F4D9F8004B3D20 /* riderImageOval267@3x.png in Resources */,
+				92BE2D4520F4D3FA004B3D20 /* SignUp.storyboard in Resources */,
+				92BE2D4F20F4D9F8004B3D20 /* mockup.png in Resources */,
+				9239EB5220F64BF100096ACF /* warningIco.png in Resources */,
+				92BE2D6D20F4EC6E004B3D20 /* Montserrat-LightItalic.ttf in Resources */,
+				92BE2D6920F4EC6E004B3D20 /* Montserrat-BoldItalic.ttf in Resources */,
+				92BE2D5520F4E562004B3D20 /* welcome.png in Resources */,
 				92BE2D2020F4C817004B3D20 /* Assets.xcassets in Resources */,
+				92BE2D3C20F4CCBC004B3D20 /* README.md in Resources */,
+				92BE2D7320F4EC6E004B3D20 /* Montserrat-ExtraLight.ttf in Resources */,
+				92BE2D6C20F4EC6E004B3D20 /* Montserrat-Thin.ttf in Resources */,
+				9239EB6320F6C75D00096ACF /* xIco_red.png in Resources */,
+				92BE2D7A20F4EC6E004B3D20 /* Montserrat-Black.ttf in Resources */,
+				92BE2D7420F4EC6E004B3D20 /* Montserrat-Italic.ttf in Resources */,
+				92BE2D6A20F4EC6E004B3D20 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				92BE2D7920F4EC6E004B3D20 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				92BE2D5120F4D9F8004B3D20 /* mockup@3x.png in Resources */,
+				92BE2D7120F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf in Resources */,
+				92BE2D7020F4EC6E004B3D20 /* Montserrat-MediumItalic.ttf in Resources */,
+				92BE2D6B20F4EC6E004B3D20 /* Montserrat-Medium.ttf in Resources */,
+				92BE2D7520F4EC6E004B3D20 /* Montserrat-ExtraBold.ttf in Resources */,
+				92BE2D6F20F4EC6E004B3D20 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				9239EB4C20F637EF00096ACF /* waitingIco.png in Resources */,
+				92BE2D7820F4EC6E004B3D20 /* Montserrat-Regular.ttf in Resources */,
+				92BE2D7620F4EC6E004B3D20 /* Montserrat-Bold.ttf in Resources */,
+				92BE2D7220F4EC6E004B3D20 /* Montserrat-SemiBold.ttf in Resources */,
+				9239EB5120F64BF100096ACF /* xIco.png in Resources */,
+				9239EB5620F6667100096ACF /* waitingIco_white.png in Resources */,
 				92BE2D1E20F4C815004B3D20 /* Main.storyboard in Resources */,
+				9239EB4420F59B7A00096ACF /* CountryPicker.bundle in Resources */,
+				9239EB5920F66C1200096ACF /* PhoneVerify.storyboard in Resources */,
+				92BE2D6E20F4EC6E004B3D20 /* Montserrat-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +441,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6C84E87AA0F754469291EFA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyStride/Pods-MyStride-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyStride/Pods-MyStride-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -202,13 +466,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9239EB4E20F6396B00096ACF /* WaitingView.swift in Sources */,
+				92BE2D4020F4D007004B3D20 /* Utils.swift in Sources */,
+				9239EB5E20F6724A00096ACF /* InputSMSCodeVC.swift in Sources */,
+				9239EB6020F6B65600096ACF /* HandlingVC.swift in Sources */,
 				92BE2D1920F4C815004B3D20 /* AppDelegate.swift in Sources */,
+				9239EB5C20F6702F00096ACF /* SignInUpModel.swift in Sources */,
+				92BE2D3220F4CBCC004B3D20 /* LaunchScreenVC.swift in Sources */,
+				9239EB4820F618B200096ACF /* CountryCodePicker.swift in Sources */,
+				9239EB5420F64C5800096ACF /* AlertView.swift in Sources */,
+				92BE2D7E20F4F1A2004B3D20 /* SignupInputVC.swift in Sources */,
+				92BE2D7C20F4EF2F004B3D20 /* SignupNavVC.swift in Sources */,
+				92BE2D4720F4D85D004B3D20 /* WelcomeScreenVC.swift in Sources */,
+				92BE2D8020F4FA58004B3D20 /* SignupPhoneVC.swift in Sources */,
+				9239EB4A20F62A6100096ACF /* NonCursorTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9239EB5720F66C1200096ACF /* PhoneVerify.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9239EB5820F66C1200096ACF /* Base */,
+			);
+			name = PhoneVerify.storyboard;
+			sourceTree = "<group>";
+		};
 		92BE2D1C20F4C815004B3D20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -225,6 +510,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		92BE2D4320F4D3FA004B3D20 /* SignUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92BE2D4420F4D3FA004B3D20 /* Base */,
+			);
+			name = SignUp.storyboard;
+			sourceTree = "<group>";
+		};
+		92BE2D8720F5027F004B3D20 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92BE2D8820F5027F004B3D20 /* Base */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -232,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -292,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -348,13 +651,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z3RBQZPMDA;
 				INFOPLIST_FILE = MyStride/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KMHK.MyStride;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyStride-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,13 +671,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z3RBQZPMDA;
 				INFOPLIST_FILE = MyStride/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KMHK.MyStride;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyStride-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
