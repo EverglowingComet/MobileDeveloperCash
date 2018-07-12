@@ -119,8 +119,8 @@ class HandlingVC: UIViewController {
 			self.lblWarning.text = ""
 		}
 		
+		eraseProc()
 		if txtHandle.text == "" {
-			eraseProc()
 			return false
 		}
 		

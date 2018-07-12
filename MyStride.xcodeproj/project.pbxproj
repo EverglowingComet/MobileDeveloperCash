@@ -62,6 +62,7 @@
 		92BE2D7E20F4F1A2004B3D20 /* SignupInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */; };
 		92BE2D8020F4FA58004B3D20 /* SignupPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */; };
 		92BE2D8920F5027F004B3D20 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D8720F5027F004B3D20 /* Localized.strings */; };
+		92EB3E9C20F7B9180082D0BB /* AnimateLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB3E9B20F7B9180082D0BB /* AnimateLaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,7 @@
 		92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupInputVC.swift; path = MyStride/ViewControllers/SignupInputVC.swift; sourceTree = SOURCE_ROOT; };
 		92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupPhoneVC.swift; path = MyStride/ViewControllers/SignupPhoneVC.swift; sourceTree = SOURCE_ROOT; };
 		92BE2D8820F5027F004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
+		92EB3E9B20F7B9180082D0BB /* AnimateLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				9239EB4920F62A6100096ACF /* NonCursorTextField.swift */,
 				9239EB4D20F6396B00096ACF /* WaitingView.swift */,
 				9239EB5320F64C5800096ACF /* AlertView.swift */,
+				92EB3E9B20F7B9180082D0BB /* AnimateLaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				9239EB5E20F6724A00096ACF /* InputSMSCodeVC.swift in Sources */,
 				9239EB6020F6B65600096ACF /* HandlingVC.swift in Sources */,
 				92BE2D1920F4C815004B3D20 /* AppDelegate.swift in Sources */,
+				92EB3E9C20F7B9180082D0BB /* AnimateLaunchView.swift in Sources */,
 				9239EB5C20F6702F00096ACF /* SignInUpModel.swift in Sources */,
 				92BE2D3220F4CBCC004B3D20 /* LaunchScreenVC.swift in Sources */,
 				9239EB4820F618B200096ACF /* CountryCodePicker.swift in Sources */,
