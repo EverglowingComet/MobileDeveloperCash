@@ -51,7 +51,7 @@ class SignupInputVC: UIViewController {
 		txtLastName.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 46, height: txtLastName.frame.size.height))
 		txtLastName.placeholder = utils.localeString("Last Name")
 		
-		btnContinue.setTitle(utils.localeString("Continue"), for: .normal)
+		btnContinue.setTitle(utils.localeString("CONTINUE"), for: .normal)
 		
 		// add tap gesture
 		view.addGestureRecognizer(UITapGestureRecognizer(target: self,
@@ -123,7 +123,14 @@ class SignupInputVC: UIViewController {
 	
 	
 	@objc func btnBackTapped(sender: Any) {
-		navigationController?.dismiss(animated: true, completion: nil)
+		let transition = CATransition()
+		transition.duration = 0.2
+		transition.type = kCATransitionPush
+		transition.subtype = kCATransitionFromLeft
+		transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+		view.window!.layer.add(transition, forKey: kCATransition)
+		
+		navigationController?.dismiss(animated: false, completion: nil)
 	}
 	
 	

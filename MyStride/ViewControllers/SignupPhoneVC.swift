@@ -14,6 +14,7 @@ class SignupPhoneVC: UIViewController {
 	@IBOutlet weak var btnContinue: UIButton!
 	
 	var txtPrefix: NonCursorTextField?
+	var countryPicker: CountryCodePicker?
 	
 	let utils = Utils.sharedInstance()
 	let model = SignInUpModel.sharedInstance()
@@ -59,14 +60,6 @@ class SignupPhoneVC: UIViewController {
 		txtPrefix?.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: txtPhone.frame.size.height))
 		txtPrefix?.rightViewMode = .always
 		
-		// for country code picker
-		let _picker = CountryCodePicker.initPicker(frame: CGRect(x: 0, y: view.frame.size.height - 302, width: view.frame.size.width, height: 302),
-												   toolBk: utils.colorBk, pickerBk: utils.colorLightBk, pickerTxt: UIColor.black,
-												   tool: utils.fontButton!, picker: utils.fontText!, bShowPhoneNumber: true, bShowFlag: false)
-		_picker.countryCodePickerDelegate = self
-		_picker.setCountry("US")
-		txtPrefix?.inputView = _picker
-		
 		txtPhone.leftView = txtPrefix
 		initTextField(textField: txtPhone, flag: false)
 		
@@ -80,8 +73,20 @@ class SignupPhoneVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		// for country code picker
+		if countryPicker != nil {
+			return
+		}
+		
+		countryPicker = CountryCodePicker.initPicker(frame: CGRect(x: 0, y: view.frame.size.height - 302, width: view.frame.size.width, height: 302),
+		toolBk: utils.colorBk, pickerBk: utils.colorLightBk, pickerTxt: UIColor.black,
+		tool: utils.fontButton!, picker: utils.fontText!, bShowPhoneNumber: true, bShowFlag: false)
+		countryPicker?.countryCodePickerDelegate = self
+		countryPicker?.setCountry("US")
+		txtPrefix?.inputView = countryPicker
 	}
 	
 	
@@ -113,7 +118,18 @@ class SignupPhoneVC: UIViewController {
 	// MARK: -
 	
 	@objc func btnBackTapped(sender: Any){
-		navigationController?.popViewController(animated: true)
+		if navigationController?.viewControllers[0] == self {
+			let transition = CATransition()
+			transition.duration = 0.2
+			transition.type = kCATransitionPush
+			transition.subtype = kCATransitionFromLeft
+			transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+			view.window!.layer.add(transition, forKey: kCATransition)
+			
+			navigationController?.dismiss(animated: true, completion: nil)
+		} else {
+			navigationController?.popViewController(animated: true)
+		}
 	}
 	
 	
@@ -216,7 +232,7 @@ extension SignupPhoneVC: UITextFieldDelegate {
 // MARK: -
 
 extension SignupPhoneVC: CountryCodePickerDelegate {
-	func countryCodePicker(_ picker: CountryCodePicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+	func countryCodePicker(_ picker: CountryCodePicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage?) {
 		txtPrefix?.text = phoneCode
 	}
 	

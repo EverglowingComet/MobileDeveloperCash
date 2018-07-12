@@ -37,12 +37,18 @@ class HandlingVC: UIViewController {
 		_lblNote.font = utils.fontNote
 		_lblNote.textColor = utils.colorGreyBk
 		
-		_lblNote.font = utils.fontNote
-		_lblNote.textColor = utils.colorAlert
+		lblWarning.font = utils.fontWarning
+		lblWarning.textColor = utils.colorWarning
 		
 		// set color to text view and buttons
 		btnContinue.setTitle(utils.localeString("CONTINUE"), for: .normal)
 		initButton(button: btnContinue, enable: false)
+		
+		txtHandle.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: txtHandle.frame.size.height))
+		txtHandle.rightViewMode = .unlessEditing
+		let _imgView = UIImageView(frame: CGRect(x: 0, y: (txtHandle.frame.size.height - 15) / 2, width: 15, height: 15))
+		_imgView.tag = 0x1000
+		txtHandle.rightView?.addSubview(_imgView)
 		
 		txtHandle?.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: txtHandle.frame.size.height))
 		initTextField(textField: txtHandle, flag: false)
@@ -90,6 +96,42 @@ class HandlingVC: UIViewController {
 			button.layer.borderColor = utils.colorBtn.cgColor
 			button.isEnabled = true
 		}
+	}
+	
+	
+	func isValidHandleName() -> Bool {
+		let validProc = { (flag: Bool) in
+			if let _imgView = self.txtHandle.rightView?.viewWithTag(0x1000) {
+				(_imgView as! UIImageView).image = UIImage(named: (flag == true ? "checkIco.png" : "xIco_red.png"))
+			}
+			
+			self.lblWarning.text = ""
+			if flag == false {
+				self.lblWarning.text = String(format: self.utils.localeString("The Handle '%@' is not available"), self.txtHandle.text!)
+			}
+		}
+		
+		let eraseProc = { () in
+			if let _imgView = self.txtHandle.rightView?.viewWithTag(0x1000) {
+				(_imgView as! UIImageView).image = nil
+			}
+			
+			self.lblWarning.text = ""
+		}
+		
+		if txtHandle.text == "" {
+			eraseProc()
+			return false
+		}
+		
+		if (txtHandle.text?.count)! < 5 {
+			validProc(false)
+			return false
+		}
+		
+		validProc(true)
+		
+		return true
 	}
 	
 	
@@ -147,6 +189,18 @@ class HandlingVC: UIViewController {
 
 // MARK: -
 extension HandlingVC: UITextFieldDelegate {
+	
+	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+		lblWarning.text = ""
+		return true
+	}
+	
+	
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		_ = isValidHandleName()
+	}
+	
+	
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		// get new string
 		let maxLength = 20
@@ -166,6 +220,7 @@ extension HandlingVC: UITextFieldDelegate {
 		
 		return false
 	}
+	
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		txtHandle.resignFirstResponder()

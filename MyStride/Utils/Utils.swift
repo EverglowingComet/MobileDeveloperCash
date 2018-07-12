@@ -22,11 +22,13 @@ class Utils: NSObject {
 	let colorBackBtn = UIColor(red: 58/255.0, green: 173/255.0, blue: 143/255.0, alpha: 1.0)
 	let colorBtn = UIColor(red: 58/255.0, green: 173/255.0, blue: 143/255.0, alpha: 1.0)
 	let colorAlert = UIColor(red: 55/255.0, green: 188/255.0, blue: 155/255.0, alpha: 1.0)
+	let colorWarning = UIColor(red: 218/255.0, green: 68/255.0, blue: 83/255.0, alpha: 1.0)
 	
 	let fontTitle = UIFont(name: "Montserrat-Bold", size: 16.0)
 	let fontButton = UIFont(name: "Montserrat-Bold", size: 14.0)
 	let fontNote = UIFont(name: "Montserrat-Regular", size: 13.0)
 	let fontText = UIFont(name: "Montserrat-Regular", size: 16.0)
+	let fontWarning = UIFont(name: "Montserrat-Regular", size: 11.0)
 	
 	
     // MARK: -

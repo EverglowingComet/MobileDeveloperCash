@@ -27,3 +27,4 @@
 "OK" = "OK";
 "Handle" = "Handle";
 "Handle is your unique 5 to 20 chracter identity";
+"The Handle '%@' is not available" = "The Handle '%@' is not available";

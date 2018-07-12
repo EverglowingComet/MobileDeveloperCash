@@ -198,6 +198,7 @@
 				92BE2D2A20F4C904004B3D20 /* Storyboards */,
 				92BE2D3E20F4CEF2004B3D20 /* Resources */,
 				92BE2D1820F4C815004B3D20 /* AppDelegate.swift */,
+				92BE2D2120F4C817004B3D20 /* LaunchScreen.storyboard */,
 				92BE2D1F20F4C817004B3D20 /* Assets.xcassets */,
 				9239EB3A20F5584C00096ACF /* MyStride-Bridging-Header.h */,
 				92BE2D3B20F4CCBC004B3D20 /* README.md */,
@@ -209,7 +210,6 @@
 		92BE2D2A20F4C904004B3D20 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				92BE2D2120F4C817004B3D20 /* LaunchScreen.storyboard */,
 				92BE2D4320F4D3FA004B3D20 /* SignUp.storyboard */,
 				9239EB5720F66C1200096ACF /* PhoneVerify.storyboard */,
 				92BE2D1C20F4C815004B3D20 /* Main.storyboard */,

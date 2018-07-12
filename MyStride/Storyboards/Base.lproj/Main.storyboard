@@ -24,13 +24,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="SIGN UP"/>
                                 <connections>
-                                    <segue destination="qbi-gI-STQ" kind="showDetail" id="2y4-Kc-6Lo"/>
+                                    <action selector="btnSignUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTh-ju-Nt9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14h-ub-8dX">
                                 <rect key="frame" x="76" y="577" width="224" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LOG IN"/>
+                                <connections>
+                                    <action selector="btnLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hC-dJ-QU8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome.png" translatesAutoresizingMaskIntoConstraints="NO" id="AVa-I7-lOa">
                                 <rect key="frame" x="42" y="68" width="292" height="429"/>
@@ -49,14 +52,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="31.793478260869566"/>
-        </scene>
-        <!--SignUp-->
-        <scene sceneID="PUp-Kr-t16">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SignUp" id="qbi-gI-STQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ecv-7h-ucD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="594" y="-50"/>
         </scene>
     </scenes>
     <resources>

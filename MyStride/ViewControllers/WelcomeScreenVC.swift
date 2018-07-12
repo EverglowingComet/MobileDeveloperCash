@@ -15,6 +15,7 @@ class WelcomeScreenVC: UIViewController {
 	@IBOutlet weak var btnLogin: UIButton!
 	
 	let utils = Utils.sharedInstance()
+	let model = SignInUpModel.sharedInstance()
 	
 
 	// MARK: -
@@ -53,4 +54,37 @@ class WelcomeScreenVC: UIViewController {
     
 
 	// MARK: -
+	
+	@IBAction func btnSignUpTapped(_ sender: Any) {
+		model.isSignUp = true
+		
+		let transition = CATransition()
+		transition.duration = 0.2
+		transition.type = kCATransitionPush
+		transition.subtype = kCATransitionFromRight
+		transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+		view.window!.layer.add(transition, forKey: kCATransition)
+		
+		let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+		let vc = storyboard.instantiateInitialViewController()
+		present(vc!, animated: false, completion: nil)
+	}
+	
+	
+	@IBAction func btnLoginTapped(_ sender: Any) {
+		model.isSignUp = false
+		
+		let storyboard = UIStoryboard(name: "PhoneVerify", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "SignupNavVC")
+		
+		let transition = CATransition()
+		transition.duration = 0.2
+		transition.type = kCATransitionPush
+		transition.subtype = kCATransitionFromRight
+		transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+		view.window!.layer.add(transition, forKey: kCATransition)
+		
+		present(vc, animated: false, completion: nil)
+	}
+	
 }

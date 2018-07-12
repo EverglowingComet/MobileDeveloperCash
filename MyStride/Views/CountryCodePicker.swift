@@ -10,7 +10,7 @@ import UIKit
 
 
 @objc public protocol CountryCodePickerDelegate {
-	func countryCodePicker(_ picker: CountryCodePicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
+	func countryCodePicker(_ picker: CountryCodePicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage?)
 	func countryCodePicker(_ picker: CountryCodePicker, didFinished finished: Bool)
 }
 
@@ -87,7 +87,7 @@ open class CountryCodePicker: UIView {
 		let country = countries[row]
 		
 		if let countryCodePickerDelegate = countryCodePickerDelegate {
-			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: nil)
 		}
 	}
 	
@@ -98,7 +98,7 @@ open class CountryCodePicker: UIView {
 		let country = countries[row]
 		
 		if let countryCodePickerDelegate = countryCodePickerDelegate {
-			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: /*country.flag!*/nil)
 		}
 	}
 	
@@ -150,9 +150,9 @@ open class CountryCodePicker: UIView {
 						return countries
 					}
 					
-					let flag = UIImage(named: "CountryPicker.bundle/Images/\(code.uppercased())", in: Bundle(for: type(of: self)), compatibleWith: nil)
+					//let flag = UIImage(named: "CountryPicker.bundle/Images/\(code.uppercased())", in: Bundle(for: type(of: self)), compatibleWith: nil)
 					
-					let country = Country(code: code, name: name, phoneCode: phoneCode, flag: flag)
+					let country = Country(code: code, name: name, phoneCode: phoneCode, flag: /*flag*/nil)
 					countries.append(country)
 				}
 				
@@ -223,7 +223,7 @@ extension CountryCodePicker: UIPickerViewDelegate, UIPickerViewDataSource {
 	open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		let country = countries[row]
 		if let countryCodePickerDelegate = countryCodePickerDelegate {
-			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+			countryCodePickerDelegate.countryCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: nil)
 		}
 	}
 	
