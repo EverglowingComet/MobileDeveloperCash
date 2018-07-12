@@ -6,17 +6,14 @@
 
 
 
-## How to build
-
-First of all, you need to install _pod_ to build this project
-  - open the project folder in _terminal_ app
-  - run this command: _pod install_
-  - open _MyStride.xcworkspace_ file for Xcode project
+## How to build the project
+  - open the project folder in `terminal` app
+  - run this command: `pod install` on the terminal
+  - open `MyStride.xcworkspace` file for Xcode project
 
 
 
 ## Overview
-
 
 
 
