@@ -673,7 +673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mystride-test.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyStride-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -693,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mystride-test.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyStride-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
