@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 		
+		// for animated launch screen
 		let _launchView = AnimateLaunchView(frame: (self.window?.frame)!)
 		self.window?.rootViewController?.view.addSubview(_launchView)
 		

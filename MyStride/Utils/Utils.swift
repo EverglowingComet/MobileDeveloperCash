@@ -66,6 +66,17 @@ class Utils: NSObject {
 	func localeString(_ string: String) -> String {
 		return NSLocalizedString(string, comment: "")
 	}
+	
+	
+	func showAlertController(vc: UIViewController, title: String, msg: String) {
+		let alertController = UIAlertController(title: title,
+												message: msg,
+												preferredStyle: .alert)
+		let retryAction = UIAlertAction(title: localeString("OK"), style: .default, handler: nil)
+		alertController.addAction(retryAction)
+		
+		vc.present(alertController, animated: true, completion:  nil)
+	}
 }
 
 

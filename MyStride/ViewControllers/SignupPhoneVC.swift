@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSCognitoIdentityProvider
+
 
 class SignupPhoneVC: UIViewController {
 	
@@ -142,20 +144,52 @@ class SignupPhoneVC: UIViewController {
 	@IBAction func btnContinueTapped(_ sender: Any) {
 		viewTapGesture(sender: self)
 		
-		WaitingView.show(view, type: .white, rect: CGRect(x: btnContinue.frame.size.width / 4, y: btnContinue.frame.origin.y, width: btnContinue.frame.size.height, height: btnContinue.frame.size.height))
-		
 		model.phoneNumber = (txtPrefix?.text)! + (txtPhone?.text)!
 		
-		Utils.isReachableNetwork { (isReachable) in
-			WaitingView.hide()
-			
+		WaitingView.show(view, type: .white,
+						 rect: CGRect(x: btnContinue.frame.size.width / 4,
+									  y: btnContinue.frame.origin.y,
+									  width: btnContinue.frame.size.height,
+									  height: btnContinue.frame.size.height))
+		
+		// check if network is available
+		Utils.isReachableNetwork {[weak self] (isReachable) in
+			guard let strongSelf = self else { return }
+
 			if isReachable == false {
-				AlertView.show(self.view, type: .warning, pos: CGPoint(x: 0, y: (self.navigationController?.navigationBar.frame.origin.y)! + (self.navigationController?.navigationBar.frame.size.height)!))
+				WaitingView.hide()
+				AlertView.show((strongSelf.view)!,
+							   type: .warning,
+							   pos: CGPoint(x: 0, y: (strongSelf.navigationController?.navigationBar.frame.origin.y)! + (strongSelf.navigationController?.navigationBar.frame.size.height)!))
 				return
 			}
-			
-			self.performSegue(withIdentifier: "segueNext", sender: nil)
 		}
+		
+		// signup to aws cognito
+		model.signUp(completed: {[weak self] (task) in
+			WaitingView.hide()
+			
+			guard let strongSelf = self else { return }
+			
+			if task == nil {
+				strongSelf.utils.showAlertController(vc: strongSelf, title: "", msg: strongSelf.utils.localeString("Unknown Error"))
+				
+			} else if let error = task?.error as NSError? {
+				strongSelf.utils.showAlertController(vc: strongSelf,
+										  title: (error.userInfo["__type"] as? String)!,
+										  msg: (error.userInfo["message"] as? String)!)
+				
+			} else if let result = task?.result  {
+				if (result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed) {
+					// handle the case where user has to confirm his identity via SMS
+					strongSelf.model.curUser = result.user
+					strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+					
+				} else {
+					strongSelf.utils.showAlertController(vc: strongSelf, title: "", msg: "")
+				}
+			}
+		})
 	}
 	
 	
@@ -234,6 +268,7 @@ extension SignupPhoneVC: UITextFieldDelegate {
 extension SignupPhoneVC: CountryCodePickerDelegate {
 	func countryCodePicker(_ picker: CountryCodePicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage?) {
 		txtPrefix?.text = phoneCode
+		model.countryCode = countryCode
 	}
 	
 	

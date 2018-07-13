@@ -135,25 +135,43 @@ class InputSMSCodeVC: UIViewController {
 	
 	@IBAction func btnContinueTapped(_ sender: Any) {
 		hideProcessing(flag: true)
-
-		if model.isValidSMS(code: txtSMS.text!) {
-			hideProcessing(flag: false)
-			performSegue(withIdentifier: "segueNext", sender: nil)
-			return
+		
+		model.verifySMSCode(code: txtSMS.text!) {[weak self] (task) in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			if let error = task?.error as NSError? {
+				strongSelf.utils.showAlertController(vc: strongSelf,
+													 title: (error.userInfo["__type"] as? String)!,
+													 msg: (error.userInfo["message"] as? String)!)
+				
+			} else {
+				strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+			}
 		}
-		
-		// show alert
-		let alert = UIAlertController(title: utils.localeString("Invalid Code"),
-									  message: utils.localeString("Please double-check the code and enter it again."),
-									  preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: utils.localeString("OK"), style: .cancel, handler: nil))
-		present(alert, animated: true, completion: nil)
-		
-		hideProcessing(flag: false)
 	}
     
 
 	@IBAction func btnResendTapped(_ sender: Any) {
+		hideProcessing(flag: true)
+		
+		model.resendSMSCode {[weak self] (task) in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			if let error = task?.error as NSError? {
+				strongSelf.utils.showAlertController(vc: strongSelf,
+													 title: (error.userInfo["__type"] as? String)!,
+													 msg: (error.userInfo["message"] as? String)!)
+				
+			} else if (task?.result) != nil {
+				strongSelf.utils.showAlertController(vc: strongSelf,
+													 title: "Code Resent",
+													 msg: "Code resent successfully")
+			}
+		}
 	}
 	
 	

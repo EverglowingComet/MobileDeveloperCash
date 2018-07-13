@@ -7,5 +7,10 @@ target 'MyStride' do
 
   # Pods for MyStride
   pod 'Alamofire'
+  pod 'AWSCore'
+  pod 'AWSCognito'
+  pod 'AWSCognitoAuth'
+  pod 'AWSCognitoIdentityProvider'
+  pod 'AWSLambda'
 
 end

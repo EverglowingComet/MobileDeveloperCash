@@ -15,6 +15,7 @@ class SignupInputVC: UIViewController {
 	@IBOutlet weak var txtLastName: UITextField!
 	
 	let utils = Utils.sharedInstance()
+	let model = SignInUpModel.sharedInstance()
 	
 
 	// MARK: -
@@ -117,6 +118,9 @@ class SignupInputVC: UIViewController {
 	
 	@IBAction func btnContinueTapped(_ sender: Any) {
 		viewTapGesture(sender: sender)
+		
+		model.firstName = txtFirstName.text
+		model.lastName = txtLastName.text
 		
 		performSegue(withIdentifier: "segueNext", sender: nil)
 	}
