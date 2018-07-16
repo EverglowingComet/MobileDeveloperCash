@@ -57,6 +57,12 @@ class HandlingVC: UIViewController {
 		view.addGestureRecognizer(UITapGestureRecognizer(target: self,
 														 action: #selector(viewTapGesture(sender:))))
     }
+	
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+	}
+	
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -148,22 +154,12 @@ class HandlingVC: UIViewController {
 	
 	
 	@IBAction func btnContinueTapped(_ sender: Any) {
-//		hideProcessing(flag: true)
-//
-//		if model.isValidSMS(code: txtSMS.text!) {
-//			hideProcessing(flag: false)
-//			performSegue(withIdentifier: "segueNext", sender: nil)
-//			return
-//		}
-//
-//		// show alert
-//		let alert = UIAlertController(title: utils.localeString("Invalid Code"),
-//									  message: utils.localeString("Please double-check the code and enter it again."),
-//									  preferredStyle: .alert)
-//		alert.addAction(UIAlertAction(title: utils.localeString("OK"), style: .cancel, handler: nil))
-//		present(alert, animated: true) {
-//			self.hideProcessing(flag: false)
-//		}
+//		WaitingView.show(view, type: .white,
+//						 rect: CGRect(x: btnContinue.frame.size.width / 4,
+//									  y: btnContinue.frame.origin.y,
+//									  width: btnContinue.frame.size.height,
+//									  height: btnContinue.frame.size.height))
+		performSegue(withIdentifier: "segueNext", sender: nil)
 	}
 	
 	

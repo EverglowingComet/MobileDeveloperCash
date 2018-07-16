@@ -32,16 +32,6 @@ class AnimateLaunchView: UIView {
 		_imgView.tag = 0x1000
 		addSubview(_imgView)
 		
-		/*UIView.animate(withDuration: 2.0, delay: 0.5, animations: {
-			_imgView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4 * 7))
-		}) { (finished) in
-			
-			UIView.animate(withDuration: 0.6, animations: {
-				self.alpha = 0
-			}, completion: { (finished) in
-				self.removeFromSuperview()
-			})
-		}*/
 		let kRotationAnimationKey = "com.myapplication.rotationanimationkey"
 		let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
 		rotationAnimation.fromValue = 0.0

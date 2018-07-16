@@ -62,6 +62,7 @@
 		92BE2D7E20F4F1A2004B3D20 /* SignupInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */; };
 		92BE2D8020F4FA58004B3D20 /* SignupPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */; };
 		92BE2D8920F5027F004B3D20 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BE2D8720F5027F004B3D20 /* Localized.strings */; };
+		92CB26D420FA371C00E092D9 /* CognitoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CB26D320FA371C00E092D9 /* CognitoHelper.swift */; };
 		92EB3E9C20F7B9180082D0BB /* AnimateLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB3E9B20F7B9180082D0BB /* AnimateLaunchView.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		92BE2D7D20F4F1A2004B3D20 /* SignupInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupInputVC.swift; path = MyStride/ViewControllers/SignupInputVC.swift; sourceTree = SOURCE_ROOT; };
 		92BE2D7F20F4FA58004B3D20 /* SignupPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupPhoneVC.swift; path = MyStride/ViewControllers/SignupPhoneVC.swift; sourceTree = SOURCE_ROOT; };
 		92BE2D8820F5027F004B3D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
+		92CB26D320FA371C00E092D9 /* CognitoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoHelper.swift; sourceTree = "<group>"; };
 		92EB3E9B20F7B9180082D0BB /* AnimateLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,9 +196,10 @@
 		92BE2D1720F4C815004B3D20 /* MyStride */ = {
 			isa = PBXGroup;
 			children = (
+				92CB26D220FA36AF00E092D9 /* Backend */,
 				92BE2D3D20F4CE00004B3D20 /* Utils */,
 				9239EB3620F53F4600096ACF /* Views */,
-				92BE2D2C20F4C915004B3D20 /* ViewModels */,
+				92BE2D2C20F4C915004B3D20 /* Models */,
 				92BE2D2B20F4C90D004B3D20 /* ViewControllers */,
 				92BE2D2A20F4C904004B3D20 /* Storyboards */,
 				92BE2D3E20F4CEF2004B3D20 /* Resources */,
@@ -232,12 +235,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		92BE2D2C20F4C915004B3D20 /* ViewModels */ = {
+		92BE2D2C20F4C915004B3D20 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9239EB5B20F6702F00096ACF /* SignInUpModel.swift */,
 			);
-			path = ViewModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		92BE2D3020F4CBB7004B3D20 /* LaunchScreenVC */ = {
@@ -301,6 +304,14 @@
 				92BE2D5F20F4EC6E004B3D20 /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92CB26D220FA36AF00E092D9 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				92CB26D320FA371C00E092D9 /* CognitoHelper.swift */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		C5414C395484EFE15BC4288D /* Pods */ = {
@@ -482,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9239EB4E20F6396B00096ACF /* WaitingView.swift in Sources */,
+				92CB26D420FA371C00E092D9 /* CognitoHelper.swift in Sources */,
 				92BE2D4020F4D007004B3D20 /* Utils.swift in Sources */,
 				9239EB5E20F6724A00096ACF /* InputSMSCodeVC.swift in Sources */,
 				9239EB6020F6B65600096ACF /* HandlingVC.swift in Sources */,

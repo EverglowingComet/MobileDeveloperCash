@@ -165,37 +165,75 @@ class SignupPhoneVC: UIViewController {
 			}
 		}
 		
-		// signup to aws cognito
-		model.signUp(completed: {[weak self] (task) in
-			WaitingView.hide()
-			
-			guard let strongSelf = self else { return }
-			
-			if task == nil {
-				strongSelf.utils.showAlertController(vc: strongSelf, title: "", msg: strongSelf.utils.localeString("Unknown Error"))
-				
-			} else if let error = task?.error as NSError? {
-				strongSelf.utils.showAlertController(vc: strongSelf,
-										  title: (error.userInfo["__type"] as? String)!,
-										  msg: (error.userInfo["message"] as? String)!)
-				
-			} else if let result = task?.result  {
-				if (result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed) {
-					// handle the case where user has to confirm his identity via SMS
-					strongSelf.model.curUser = result.user
-					strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
-					
-				} else {
-					strongSelf.utils.showAlertController(vc: strongSelf, title: "", msg: "")
-				}
-			}
-		})
+		if model.isSignUp == true {
+			signUp()
+		} else {
+			login()
+		}
 	}
 	
 	
 	// MARK: -
 	
-	func parsePhoneNumber(str: String) -> String {
+	private func signUp() {
+		// signup to aws cognito
+		model.signUp(completed: {[weak self] in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			// handle the case where user has to confirm his identity via SMS
+			strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+			
+		}, resign: {[weak self] in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+	
+			// I don't know what to do in this case
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: "",
+												 msg: (self?.utils.localeString("Already existing user!\nPlease verify with your phone number to login."))!)
+			
+		}, failed: {[weak self] (error) in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: ""/*(error.userInfo["__type"] as? String)!*/,
+												 msg: (error.userInfo["message"] as? String)!)
+			
+		}) {[weak self] (error) in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: ""/*(error.userInfo["__type"] as? String)!*/,
+				msg: "It is already existing user with other phone number!\nPlease try again with right phone number.")
+		}
+	}
+	
+	
+	private func login() {
+		model.sendAuthReq(completed: {[weak self] in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			// handle the case where user has to confirm his identity via SMS
+			strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+			
+		}) {[weak self] (error) in
+			WaitingView.hide()
+			guard let strongSelf = self else { return }
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: ""/*(error.userInfo["__type"] as? String)!*/,
+												 msg: (error.userInfo["message"] as? String)!)
+		}
+	}
+	
+	
+	private func parsePhoneNumber(str: String) -> String {
 		let tmp = str.replacingOccurrences(of: "-", with: "")
 		var val: String?
 		

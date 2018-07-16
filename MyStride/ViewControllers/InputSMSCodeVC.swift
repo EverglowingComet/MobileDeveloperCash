@@ -136,19 +136,11 @@ class InputSMSCodeVC: UIViewController {
 	@IBAction func btnContinueTapped(_ sender: Any) {
 		hideProcessing(flag: true)
 		
-		model.verifySMSCode(code: txtSMS.text!) {[weak self] (task) in
-			guard let strongSelf = self else { return }
+		if model.isSignUp == true {
+			verifySignup()
 			
-			strongSelf.hideProcessing(flag: false)
-			
-			if let error = task?.error as NSError? {
-				strongSelf.utils.showAlertController(vc: strongSelf,
-													 title: (error.userInfo["__type"] as? String)!,
-													 msg: (error.userInfo["message"] as? String)!)
-				
-			} else {
-				strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
-			}
+		} else {
+			verifyLogin()
 		}
 	}
     
@@ -156,21 +148,71 @@ class InputSMSCodeVC: UIViewController {
 	@IBAction func btnResendTapped(_ sender: Any) {
 		hideProcessing(flag: true)
 		
-		model.resendSMSCode {[weak self] (task) in
+		model.resendVerification(completed: {[weak self] in
 			guard let strongSelf = self else { return }
 			
 			strongSelf.hideProcessing(flag: false)
 			
-			if let error = task?.error as NSError? {
-				strongSelf.utils.showAlertController(vc: strongSelf,
-													 title: (error.userInfo["__type"] as? String)!,
-													 msg: (error.userInfo["message"] as? String)!)
-				
-			} else if (task?.result) != nil {
-				strongSelf.utils.showAlertController(vc: strongSelf,
-													 title: "Code Resent",
-													 msg: "Code resent successfully")
-			}
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: "Code Resent",
+												 msg: "Code resent successfully")
+			
+		}) {[weak self] (error) in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+											 title: ""/*(error.userInfo["__type"] as? String)!*/,
+			msg: (error.userInfo["message"] as? String)!)
+		}
+	}
+	
+	
+	// MARK: -
+	
+	func verifySignup() {
+		model.verifySignUp(code: txtSMS.text!, completed: {[weak self] in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: "",
+												 msg: "Sign up successfully!")
+			
+		}) {[weak self] (error) in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+											 title: ""/*(error.userInfo["__type"] as? String)!*/,
+												msg: (error.userInfo["message"] as? String)!)
+		}
+	}
+	
+	
+	func verifyLogin() {
+		model.verifyAuth(code: txtSMS.text!, completed: {[weak self] in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			strongSelf.performSegue(withIdentifier: "segueNext", sender: nil)
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: "",
+												 msg: "Login successfully!")
+			
+		}) {[weak self] (error) in
+			guard let strongSelf = self else { return }
+			
+			strongSelf.hideProcessing(flag: false)
+			
+			strongSelf.utils.showAlertController(vc: strongSelf,
+												 title: ""/*(error.userInfo["__type"] as? String)!*/,
+												msg: (error.userInfo["message"] as? String)!)
 		}
 	}
 	
